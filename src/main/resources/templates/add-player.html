@@ -10,6 +10,7 @@
     <h1>Add Player</h1>
     <div class="container form">
         <form th:action="@{/save-player}" th:object="${player}" method="post" >
+            <input th:field="*{id}" type="hidden" />
             <div class="input-group mb-3 ">
                 <div class="input-group-prepend">
                     <span class="input-group-text">@</span>
@@ -34,7 +35,7 @@
                 </div>
                 <input th:field="*{phone}" type="text" class="form-control" placeholder="Phone" aria-label="Username" aria-describedby="basic-addon1">
             </div>
-            <button class="btn btn-success">Add</button>
+            <button type="submit" class="btn btn-success">Add</button>
         </form>
 
     </div>
