@@ -7,3 +7,9 @@ h1 {
 .table {
     margin: 50px;
 }
+.form {
+    margin:50px;
+    background-color: #c85151;
+    color: white;
+    padding:20px;
+}

@@ -22,4 +22,31 @@ public class PlayerController {
         model.addAttribute("players", playerService.players());
         return "home";
     }
+
+    @GetMapping("/add-player")
+    public String addPlayer() {
+        return "add-player";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
