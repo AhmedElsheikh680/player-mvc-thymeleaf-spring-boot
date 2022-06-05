@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -24,10 +26,16 @@ public class PlayerController {
     }
 
     @GetMapping("/add-player")
-    public String addPlayer() {
+    public String addPlayer(Model model) {
+        model.addAttribute("player", new Player());
         return "add-player";
     }
 
+    @PostMapping("/save-player")
+    public String savePlayer(@ModelAttribute("player") Player player) {
+        playerService.addPlayer(player);
+        return "redirect:/players";
+    }
 
 
 
