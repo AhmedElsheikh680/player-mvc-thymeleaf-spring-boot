@@ -40,7 +40,11 @@ public class PlayerController {
         return "add-player";
     }
 
-
+    @GetMapping("/delete-player")
+    public String deletePlayer(@RequestParam("playerId") int id) {
+        playerService.deletePlayer(id);
+        return "redirect:/players";
+    }
 
 
 

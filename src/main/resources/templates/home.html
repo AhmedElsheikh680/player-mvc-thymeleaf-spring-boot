@@ -29,7 +29,7 @@
                 <td th:text="${temp.phone}"></td>
                 <td>
                     <a th:href="@{/get-player(playerid=${temp.id})}" class="btn btn-info">Edit</a>
-                    <a class="btn btn-danger">Delete</a>
+                    <a th:href="@{/delete-player(playerId=${temp.id})}" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
 

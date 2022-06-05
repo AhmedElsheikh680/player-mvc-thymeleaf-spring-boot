@@ -26,4 +26,8 @@ public class PlayerService {
     public Player getPlayer(int id) {
         return playerDao.findById(id).get();
     }
+
+    public void deletePlayer(int id) {
+        playerDao.deleteById(id);
+    }
 }
